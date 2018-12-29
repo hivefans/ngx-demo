@@ -1,0 +1,12 @@
+{
+    "API": {
+        "user": [
+            {"name":"register", "type":"", "handler":""},
+            {"name":"login", "type":"", "handler":""},
+            {"name":"logout", "type":"", "handler":""}
+        ],
+
+        "pay":{
+        }
+    }
+}
