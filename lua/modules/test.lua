@@ -4,11 +4,44 @@
 --- DateTime: 18-12-5 下午4:44
 ---
 
+local request = require("base.request")
+local db_mysql = require("base.common.db_mysql")
+
 local _M = {}
 
-function _M.test()
-    ngx.log(ngx.ERR, ">>>>>>>>>")
-    return "AHA"
-end
+function _M.run()
+    local host = "139.196.180.249"
+    local port = 3306
+    --database = "trade_api",
+    local database = "zs-netcash"
+    local user = "admin"
+    local password = "zhengsu@2018"
+    local max_packet_size = 1024 * 1024
 
+    db_mysql:init(host, port, database, user, password, max_packet_size, 5000)
+
+    -- local db, err = db_mysql:new()
+    -- if not db then
+    --     ngx.say(err)
+    --     return
+    -- end
+    
+    -- local res, err = db:exec_query("show tables")
+    -- if not res then
+    --     ngx.say(err)
+    -- else
+    --     return request.say(200, "OK", res)
+    -- end
+    -- db:close()
+
+   
+    local res, err = db_mysql:exec_once("show tables")
+    if not res then
+        ngx.say(err)
+    else
+        return request.say(200, "OK", res)
+    end
+  
+end
+   
 return _M

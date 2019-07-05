@@ -19,8 +19,23 @@ function _M.load_json_file(filename)
             buf  = buf .. bufline
         end
     end
-    ngx.log(ngx.ERR, buf)
-    return buf
+    return _M.json_decode(buf)
+end
+
+function _M.json_encode(buf)
+    return cjson.encode(buf)
+end
+
+function _M.json_decode(buf)
+    if 'string' ~= type(buf) then
+        return nil, "JSON decode failed, data type is not string: " .. type(buf)
+    end
+    local ok, data = pcall(cjson.decode, buf)
+    if ok then
+        return data
+    else
+        return nil, "JSON decode failed, buf=" .. buf
+    end
 end
 
 return _M
