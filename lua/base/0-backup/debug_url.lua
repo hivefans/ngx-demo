@@ -2,7 +2,7 @@
 --  作者:Steven
 --  日期:2018-05-07
 --  文件名:lua/resty/debug/debug_url.lua
---  版权说明:南京正溯网络科技有限公司.版权所有©copy right.
+--  版权说明:
 --  openresty 调试和执行测试环境, 通过该接口模拟ngx的功能接口,实现openrety业务开发与调试
 --  本函数主要用来测试各类关于http接口等相关分解与测试,模拟ngx的配置解析与测试,模拟参数传输的测试
 --  如 http://www.xxx.com/tests/readme.action

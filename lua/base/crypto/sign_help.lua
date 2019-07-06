@@ -2,7 +2,7 @@
 --  作者:Steven 
 --  日期:2017-02-26
 --  文件名:sign_help.lua
---  版权说明:南京正溯网络科技有限公司.版权所有©copy right.
+--  版权说明:
 --  关于签名相关应用帮助类
 --]]
 local cjson = require "cjson"

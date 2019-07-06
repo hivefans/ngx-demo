@@ -2,7 +2,7 @@
 --  作者:Steven
 --  日期:2017-02-26
 --  文件名:lua/resty/utils/time/timer_help.lua
---  版权说明:南京正溯网络科技有限公司.版权所有©copy right.
+--  版权说明:
 --  Version: V1.0
         author:Steven 定时器实现,与系统的定时不同,注意
         openresty 的时间定时器 用例说明

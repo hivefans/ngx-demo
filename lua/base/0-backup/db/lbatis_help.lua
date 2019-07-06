@@ -2,7 +2,7 @@
 --  作者:Steven
 --  日期:2018-11-19
 --  文件名:lua/resty/utils/db/lbatis_help.lua
---  版权说明:南京正溯网络科技有限公司.版权所有©copy right.
+--  版权说明:
 --  Version: V1.0
         author: Steven
         date: 2018-11-19
